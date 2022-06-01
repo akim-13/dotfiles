@@ -1,0 +1,18 @@
+blocks:
+  - permission
+  - user
+  - date
+  - size
+  - name
+color:
+  when: always
+date: relative
+icons:
+  when: always
+  theme: fancy
+indicators: true
+sorting: 
+  column: version
+  reverse: true
+  dir-grouping: first
+total-size: true 

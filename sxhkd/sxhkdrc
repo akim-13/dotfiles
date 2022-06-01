@@ -1,0 +1,83 @@
+# Reload the configuration
+alt+r;alt+h
+ pkill sxhkd ; sxhkd &
+
+
+# Core functionality
+## Change brightness
+XF86MonBrightness{Up,Down}
+ brightnessctl s 10{+,-}
+
+## Changing the Volume
+XF86Audio{Raise,Lower}Volume
+ pulsemixer --change-volume {+,-}5; pkill -RTMIN+10 dwmblocks
+XF86AudioMute
+ pulsemixer --toggle-mute; pkill -RTMIN+10 dwmblocks
+
+## Screenshot
+alt+s;alt+s
+ flameshot gui
+alt+f;alt+s
+ flameshot full -c -p ~/pix/ss
+
+
+# Power menu
+## Poweroff
+super+shift+BackSpace
+ poweroff
+
+## Quit current session
+super+alt+Q
+ pkill Xorg
+
+## Reboot
+super+R
+ reboot
+
+
+# Launching programs
+## Run the application launcher
+alt+Return
+ rofi -show run
+
+## Terminal emulator
+alt+space
+ alacritty
+
+## Browser
+alt+q;alt+t
+ prime-run qutebrowser
+alt+b;alt+r
+ brave
+
+## Zoom
+alt+z;alt+o
+ zoom
+
+## Typing trainer
+alt+t;alt+p
+ tipp10
+
+## Password manager
+alt+k;alt+p
+ keepassxc
+
+## Minecraft
+alt+m;alt+c
+ prime-run minecraft-launcher &
+
+## Discord
+alt+d;alt+s
+ discord
+
+## Messaging browser
+alt+f;alt+e
+ ferdi
+
+## Notes
+alt+o;alt+b
+ obsidian
+
+## Libreoffice
+alt+l;+alt+o
+ libreoffice
