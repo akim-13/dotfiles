@@ -35,6 +35,12 @@ super+R
  reboot
 
 
+# Misc
+## Change wallpaper
+alt+w
+ rwp
+
+
 # Launching programs
 ## Run the application launcher
 alt+Return
