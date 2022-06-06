@@ -10,9 +10,9 @@ XF86MonBrightness{Up,Down}
 
 ## Changing the Volume
 XF86Audio{Raise,Lower}Volume
- pulsemixer --change-volume {+,-}5; pkill -RTMIN+10 dwmblocks
+ pulsemixer --change-volume {+,-}5; kill -44 $(pidof dwmblocks)
 XF86AudioMute
- pulsemixer --toggle-mute; pkill -RTMIN+10 dwmblocks
+ pulsemixer --toggle-mute; kill -44 $(pidof dwmblocks)
 
 ## Screenshot
 alt+s;alt+s
