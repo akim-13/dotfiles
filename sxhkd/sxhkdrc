@@ -14,6 +14,10 @@ XF86Audio{Raise,Lower}Volume
 XF86AudioMute
  pulsemixer --toggle-mute; kill -44 $(pidof dwmblocks)
 
+## Switching layout (See /etc/X11/xorg.conf.d/30-keyboard.conf)
+alt+Shift_L
+ kill -45 $(pidof dwmblocks)
+
 ## Screenshot
 alt+s;alt+s
  flameshot gui

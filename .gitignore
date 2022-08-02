@@ -1,11 +1,11 @@
 # Ignore everything
 /*
 
+
 # Except for the following
 !.gitignore
 !X11/
 !alacritty/
-!bpytop/
 !lsd/
 !neofetch/
 !paru/
@@ -14,8 +14,10 @@
 !sxhkd/
 !starship.toml
 
+
 # It is not possible to re-include a file if a parent 
 # directory of that file is excluded, therefore:
+
 # Do not ignore qutebrowser directory
 !qutebrowser/
 # Ignore files and sub dirs in the /qutebrowser directory
@@ -23,3 +25,8 @@
 # But do not ignore the config files
 !/qutebrowser/config.py
 !/qutebrowser/autoconfig.yml
+
+# Bpytop
+!bpytop/
+/bpytop/*
+!/bpytop/bpytop.conf
