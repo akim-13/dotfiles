@@ -6,7 +6,7 @@ alt+r;alt+h
 # Core functionality
 ## Change brightness
 XF86MonBrightness{Up,Down}
- brightnessctl s 10{+,-}
+ brightnessctl s 51.2{+,-}; kill -46 $(pidof dwmblocks)
 
 ## Changing the Volume
 XF86Audio{Raise,Lower}Volume
@@ -89,5 +89,13 @@ alt+o;alt+b
  obsidian
 
 ## Libreoffice
-alt+l;+alt+o
+alt+l;alt+o
  libreoffice
+
+## Filemanager
+alt+d;alt+p
+ dolphin
+
+## Music player
+alt+s;alt+p
+ spotify
