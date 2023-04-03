@@ -6,7 +6,7 @@ alt+r;alt+h
 # Core functionality
 ## Change brightness
 XF86MonBrightness{Up,Down}
- brightnessctl s 51.2{+,-}; kill -46 $(pidof dwmblocks)
+ brightnessctl s 40{+,-}; kill -46 $(pidof dwmblocks)
 
 ## Changing the Volume
 XF86Audio{Raise,Lower}Volume
@@ -43,6 +43,37 @@ super+R
 ## Change wallpaper
 alt+w
  rwp
+
+## Toggle pause music on Spotify
+XF86AudioPlay
+ dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+
+## Next Spotify track
+alt+Right
+ dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+
+## Previous Spotify track
+alt+Left
+ dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+
+## Wacom Drawing Tablet
+## (see /etc/X11/xorg.conf.d/40-wacom-tablet.conf for buttonN remaps)
+### Stylus upper button, toggle between pen and eraser in excalidraw
+button15
+ xte {"key 0", "key 7"}
+### Pad buttons from left to right
+#### Toggle between selection and square tool
+button16
+ xte {"key 2", "key 1"}
+#### Toggle 100%/200% zoom
+button17
+ xte {"keydown Control_L" "key 0" "keyup Control_L" "str ++++++++++++++++++++", "keydown Control_L" "key 0" "keyup Control_L"}
+#### Undo
+button18
+ xte "keydown Control_L" "key z" "keyup Control_L"
+#### Redo
+button19
+ xte "keydown Control_L" "keydown Shift_L" "key z" "keyup Control_L" "keyup Shift_L"
 
 
 # Launching programs
@@ -99,3 +130,7 @@ alt+d;alt+p
 ## Music player
 alt+s;alt+p
  spotify
+
+## Skype
+alt+s;alt+k
+ skypeforlinux 

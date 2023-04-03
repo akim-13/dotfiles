@@ -15,4 +15,3 @@ sorting:
   column: version
   reverse: true
   dir-grouping: first
-total-size: true 

@@ -1,0 +1,93 @@
+# Custom urgencies
+## Tags
+urgency.user.tag.linux.coefficient=2
+urgency.user.tag.family.coefficient=4
+urgency.user.tag.health.coefficient=4
+urgency.user.tag.routine.coefficient=-1
+urgency.user.tag.edu.coefficient=3
+urgency.user.tag.sc.coefficient=4
+urgency.user.tag.bday.coefficient=5
+## Projects
+urgency.user.project.shopls.coefficient=2
+urgency.user.project.hw.coefficient=7
+urgency.user.project.laptop.coefficient=1
+urgency.user.project.taskwarrior.coefficient=1
+urgency.user.project.vim.coefficient=1
+
+# Custom reports
+## Default report
+report.main.description="Default customized report"
+report.main.columns=urgency,due.relative,project,tags,priority,id,description.count,progress
+report.main.labels=Urge,Due,Project,Tags,!!,ID,Description,Progress
+report.main.sort=urgency+
+report.main.filter=status:pending 
+
+# XDG paths
+data.location=~/.config/taskwarrior
+hooks.location=~/.config/taskwarrior/hooks
+
+# Don't show config override messages and filter
+verbose=blank,blank,footnote,label,new-id,affected,edit,special,project,sync,unwait,context
+
+# Priorities
+uda.priority.values=MX,H3,H2,H1,M3,M2,M1,L3,L2,L1,
+urgency.uda.priority.MX.coefficient=   100
+urgency.uda.priority.H3.coefficient=    9
+urgency.uda.priority.H2.coefficient=    8
+urgency.uda.priority.H1.coefficient=    7
+urgency.uda.priority.M3.coefficient=    6
+urgency.uda.priority.M2.coefficient=    5
+urgency.uda.priority.M1.coefficient=    4
+urgency.uda.priority.L3.coefficient=    3
+urgency.uda.priority.L2.coefficient=    2
+urgency.uda.priority.L1.coefficient=    1
+
+# Customized default urgencies
+urgency.due.coefficient=               8.0
+urgency.scheduled.coefficient=         7.0
+urgency.active.coefficient=            6.0
+urgency.age.coefficient=               3.0
+urgency.age.max=                       365
+urgency.blocking.coefficient=          8.0
+urgency.blocked.coefficient=           -5.0
+urgency.waiting.coefficient=           -3.0
+urgency.inherit=                       0
+urgency.project.coefficient=           0
+urgency.annotations.coefficient=       0
+urgency.tags.coefficient=              0
+# urgency.overdue.coefficient=10
+
+# UDA
+## Progress
+uda.progress.type=string
+uda.progress.label=Progress
+
+# Colors
+color=1
+rule.precedence.color=overdue,uda,deleted,completed,active,keyword.,tag.,project.,scheduled,due.today,due,blocked,blocking,recurring,tagged
+
+## This is a theme that disables all default colors.
+## It can be used as template for other themes.
+include /usr/share/doc/task/rc/dark-256.theme
+
+color.active=black on rgb141
+color.blocked=black on color8
+color.due.today=on inverse
+color.due=bold  # Breaks everything if removed. Idk, don't ask.
+color.label.sort=color9
+color.label=gray20
+color.overdue=underline black on color1
+color.scheduled=rgb013
+color.tag.next=color11
+color.uda.priority.L1=rgb141
+color.uda.priority.L2=rgb130
+color.uda.priority.L3=rgb020
+color.uda.priority.M1=rgb442
+color.uda.priority.M2=rgb541
+color.uda.priority.M3=rgb420
+color.uda.priority.H1=rgb411
+color.uda.priority.H2=color9
+color.uda.priority.H3=color1
+color.uda.priority.MX=underline bold on rgb101
+color.recurring=
+color.tagged=
